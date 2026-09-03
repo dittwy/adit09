@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Saya - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link active" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <div class="section-header">
+        <h2 class="section-title">Tentang Saya</h2>
+        <p class="section-subtitle">Profil pribadi dan galeri aktivitas pembelajaran laboratorium</p>
+      </div>
+
+      <article class="glass-card biodata-widget">
+        <h3 style="color:var(--accent-blue); margin-bottom:0.5rem;">📋 Biodata Siswa</h3>
+        <div class="ios-list">
+          <div class="ios-list-item">
+            <span class="ios-list-label">Nama Lengkap</span>
+            <span class="ios-list-value">Galuh Adittya Wijaya</span>
+          </div>
+          <div class="ios-list-item">
+            <span class="ios-list-label">Kelas / Peminatan</span>
+            <span class="ios-list-value">XII - A6 / Rekayasa Perangkat Lunak & Informatika</span>
+          </div>
+          <div class="ios-list-item">
+            <span class="ios-list-label">Pendidikan</span>
+            <span class="ios-list-value">SMA Negeri 2 Mojokerto</span>
+          </div>
+          <div class="ios-list-item">
+            <span class="ios-list-label">Minat Studi Masa Depan</span>
+            <span class="ios-list-value">Akademi Kepolisian, Kedinasan, Information Technology(IT)</span>
+          </div>
+        </div>
+      </article>
+
+      <section>
+        <h3 style="text-align:center; margin-bottom:1rem; font-size:1.3rem;">📸 Galeri Aktivitas Belajar</h3>
+        <div class="gallery-grid">
+          <article class="glass-card gallery-widget">
+            <img src="rm 1.jpg" alt="Galeri 1" class="gallery-img">
+            <div class="gallery-caption">Gallery 1</div>
+          </article>
+          <article class="glass-card gallery-widget">
+            <img src="rm 3.jpg" alt="Galeri 2" class="gallery-img">
+            <div class="gallery-caption">Gallery 2</div>
+          </article>
+          <article class="gallery-card glass-card gallery-widget">
+            <img src="rm 2.jpg" alt="Galeri 3" class="gallery-img">
+            <div class="gallery-caption">Gallery 3</div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', newTheme);
+      const themeBtn = document.getElementById('themeToggleBtn');
+      themeBtn.innerHTML = newTheme === 'dark' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>

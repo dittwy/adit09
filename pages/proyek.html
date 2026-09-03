@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link active" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <div class="section-header">
+        <h2 class="section-title">Galeri Karya & Proyek</h2>
+        <p class="section-subtitle">Showcase penugasan aplikasi web dan repositori karya siswa</p>
+      </div>
+
+      <div class="module-grid">
+        <article class="glass-card">
+          <span class="card-tag">Web Development</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Portofolio Digital iOS 26</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Aplikasi web portofolio responsif bertema Glassmorphic iOS 26 lengkap dengan dukungan Light/Dark mode.
+          </p>
+          <a href="https://github.com" target="_blank" style="display:inline-block; margin-top:1.2rem; color:var(--accent-blue); font-weight:600; text-decoration:none;">
+            Tautan Repositori GitHub &rarr;
+          </a>
+        </article>
+
+        <article class="glass-card">
+          <span class="card-tag">Algoritma CLI</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Aplikasi Kasir Toko Sekolah</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Program kalkulator kasir berbasis terminal untuk pencatatan pesanan, pembukaan diskon, dan pencetakan nota.
+          </p>
+          <a href="https://github.com" target="_blank" style="display:inline-block; margin-top:1.2rem; color:var(--accent-blue); font-weight:600; text-decoration:none;">
+            Tautan Repositori GitHub &rarr;
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+  <footer><p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p></footer>
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      htmlEl.setAttribute('data-theme', htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>

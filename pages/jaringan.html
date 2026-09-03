@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaringan - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link active" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <div class="section-header">
+        <h2 class="section-title">Modul Jaringan Komputer</h2>
+        <p class="section-subtitle">Dokumentasi tugas, analisis protokol, dan simulasi topologi jaringan</p>
+      </div>
+      <div class="module-grid">
+        <article class="glass-card">
+          <span class="card-tag">Tugas 01</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Subnetting & IP Address IPv4</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Dokumentasi kalkulasi Subnetting Class C, alokasi IP Host, Default Gateway, serta pengujian konektivitas menggunakan Ping & Tracert.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8rem; color:var(--accent-green);">● Selesai</span>
+            <button class="ios-btn ios-btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.8rem;">Detail Modul</button>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <span class="card-tag">Tugas 02</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Topologi Cisco Packet Tracer</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Perancangan topologi Star dengan 2 Router, 3 Switch, serta 12 Client PC terhubung ke Web Server lokal & DHCP Service.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8rem; color:var(--accent-cyan);">● Siap Diuji</span>
+            <button class="ios-btn ios-btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.8rem;">Detail Modul</button>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <span class="card-tag">Tugas 03</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Analisis Paket Wireshark</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Analisis transmisi data HTTP, DNS Query, dan 3-Way Handshake TCP untuk pengamatan jalur keamanan komunikasi data.
+          </p>
+          <div style="margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.8rem; color:var(--accent-orange);">● Dalam Proses</span>
+            <button class="ios-btn ios-btn-secondary" style="padding:0.4rem 0.9rem; font-size:0.8rem;">Detail Modul</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p>
+  </footer>
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      htmlEl.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+      document.getElementById('themeToggleBtn').innerHTML = currentTheme === 'dark' ? '☀️' : '🌙';
+    }
+  </script>
+</body>
+</html>

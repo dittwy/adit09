@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link active" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <div class="section-header">
+        <h2 class="section-title">Formulir Kontak</h2>
+        <p class="section-subtitle">Hubungi saya untuk masukan, tanggapan, atau peluang kolaborasi</p>
+      </div>
+
+      <div class="contact-layout">
+        <article class="glass-card" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple)); color:white;">
+          <h3 style="font-size:1.4rem; margin-bottom:1rem;">Hubungi Langsung</h3>
+          <p style="opacity:0.9; margin-bottom:2rem; font-size:0.95rem;">
+            Silakan tinggalkan pesan melalui formulir iOS di samping atau hubungi alamat surat elektronik resmi sekolah.
+          </p>
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div>📧 galuh.adittya25@sma.belajar.id</div>
+            <div>📍 Kota Mojokerto, Jawa Timur</div>
+            <div>🏫 SMKN 1 - Lab RPL Informatika</div>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="nama">Nama Pengirim</label>
+              <input type="text" id="nama" class="ios-input" placeholder="Masukkan nama kamu" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Alamat Email</label>
+              <input type="email" id="email" class="ios-input" placeholder="contoh@domain.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="kategori">Kategori Pesan</label>
+              <select id="kategori" class="ios-select" required>
+                <option value="" disabled selected>-- Pilih Kategori --</option>
+                <option value="Pertanyaan">Pertanyaan Materi</option>
+                <option value="Kolaborasi">Kolaborasi Proyek</option>
+                <option value="Saran">Saran & Masukan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="pesan">Pesan Teks</label>
+              <textarea id="pesan" class="ios-textarea" placeholder="Tuliskan isi pesan secara jelas..." required></textarea>
+            </div>
+            <button type="submit" class="ios-btn ios-btn-primary" style="width:100%; justify-content:center;">
+              ✉️ Kirim Pesan Sekarang
+            </button>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast-modal" id="toastModal">
+    <span>✅</span>
+    <span id="toastMsg">Terima kasih! Pesan kamu berhasil terkirim.</span>
+  </div>
+
+  <footer><p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p></footer>
+
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      htmlEl.setAttribute('data-theme', htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    }
+    function showToast(message) {
+      const toast = document.getElementById('toastModal');
+      document.getElementById('toastMsg').textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => { toast.classList.remove('show'); }, 3000);
+    }
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      showToast('Pesan kamu berhasil terkirim via iOS System!');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>

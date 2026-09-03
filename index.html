@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link active" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <article class="glass-card hero-widget">
+        <div class="hero-content">
+          <span class="hero-badge">✨ Etalase Digital Kelas XII</span>
+          <h1 class="hero-title">Adittya Wijaya</h1>
+          <p class="hero-description">
+            Siswa Kelas XII - Peminatan Rekayasa Perangkat Lunak / Informatika. 
+            Fokus pada pengembangan aplikasi web, simulasi jaringan komputer, dan Internet of Things (IoT).
+          </p>
+          <div class="cta-group">
+            <button class="ios-btn ios-btn-primary" onclick="window.location.href='proyek.html'">🚀 Lihat Proyek Saya</button>
+            <button class="ios-btn ios-btn-secondary" onclick="window.location.href='kontak.html'">💬 Hubungi Saya</button>
+          </div>
+        </div>
+        <div class="avatar-wrapper">
+          <svg class="avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" fill="url(#hero-gradient)"/>
+            <circle cx="50" cy="40" r="22" fill="#ffffff" opacity="0.95"/>
+            <path d="M18 88C18 69.5 32.3 55 50 55C67.7 55 82 69.5 82 88H18Z" fill="#ffffff" opacity="0.95"/>
+            <defs>
+              <linearGradient id="hero-gradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#007AFF"/>
+                <stop offset="1" stop-color="#5856D6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </article>
+
+      <div class="section-header">
+        <h2 class="section-title">Ringkasan Keahlian</h2>
+        <p class="section-subtitle">Kompetensi utama bidang Informatika & Rekayasa Perangkat Lunak</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="glass-card skill-widget">
+          <div class="skill-icon-box">🌐</div>
+          <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">HTML5 & CSS3</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Desain Web Semantik Responsif & iOS Glassmorphism.</p>
+        </article>
+        <article class="glass-card skill-widget">
+          <div class="skill-icon-box" style="background:linear-gradient(135deg, var(--accent-purple), var(--accent-pink));">🖥️</div>
+          <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Jaringan Dasar</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Subnetting IPv4, Cisco Packet Tracer & Wireshark.</p>
+        </article>
+        <article class="glass-card skill-widget">
+          <div class="skill-icon-box" style="background:linear-gradient(135deg, var(--accent-green), var(--accent-cyan));">🔌</div>
+          <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">IoT & Arduino</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Pemrograman Microcontroller C++, Sensor Suhu & Servo.</p>
+        </article>
+        <article class="glass-card skill-widget">
+          <div class="skill-icon-box" style="background:linear-gradient(135deg, var(--accent-orange), var(--accent-pink));">🧩</div>
+          <h3 style="font-size:1.1rem; margin-bottom:0.4rem;">Problem Solving</h3>
+          <p style="font-size:0.85rem; color:var(--text-muted);">Analisis logika algoritma dan pemecahan masalah komputasi.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p>
+    <div class="social-pills">
+      <a href="https://github.com" target="_blank" class="social-pill">GitHub</a>
+      <a href="https://linkedin.com" target="_blank" class="social-pill">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" class="social-pill">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      const currentTheme = htmlEl.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlEl.setAttribute('data-theme', newTheme);
+      const themeBtn = document.getElementById('themeToggleBtn');
+      themeBtn.innerHTML = newTheme === 'dark' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>

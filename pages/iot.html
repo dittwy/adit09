@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IoT & Arduino - Portofolio Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="brand" onclick="window.location.href='index.html'">
+        <span>Adittya</span>
+        <span class="brand-badge">XII</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">🏠 <span>Beranda</span></a></li>
+        <li><a class="nav-link" href="tentang.html">👤 <span>Tentang</span></a></li>
+        <li><a class="nav-link" href="jaringan.html">🌐 <span>Jaringan</span></a></li>
+        <li><a class="nav-link active" href="iot.html">🤖 <span>IoT</span></a></li>
+        <li><a class="nav-link" href="proyek.html">💡 <span>Proyek</span></a></li>
+        <li><a class="nav-link" href="kontak.html">📬 <span>Kontak</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-section active">
+      <div class="section-header">
+        <h2 class="section-title">Modul IoT & Arduino</h2>
+        <p class="section-subtitle">Skematik sirkuit, baris program C++, dan integrasi komponen sensorik</p>
+      </div>
+
+      <div class="module-grid">
+        <article class="glass-card">
+          <span class="card-tag">C++ Arduino</span>
+          <h3 style="margin: 0.8rem 0 0.2rem;">Monitoring Suhu DHT11</h3>
+          <div class="code-box">
+#include &lt;DHT.h&gt;
+#define DHTPIN 2
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+}
+          </div>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Pengukuran parameter kelembapan & suhu lingkungan secara langsung pada layar LCD I2C.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <span class="card-tag">Aktuator Servo</span>
+          <h3 style="margin: 0.8rem 0 0.4rem;">Palang Otomatis Sensor Ultrasonik</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.5;">
+            Sistem simulasi kontrol kendaraan otomatis memanfaatkan sensor jarak HC-SR04 dan Micro Servo SG90.
+          </p>
+          <div class="code-box">
+#include &lt;Servo.h&gt;
+Servo gate;
+void loop() {
+  if (getDistance() &lt; 10) gate.write(90);
+}
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+  <footer><p class="footer-text">&copy; 2026 Adittya Wijaya • Portofolio Kelas XII Informatika.</p></footer>
+  <script>
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      htmlEl.setAttribute('data-theme', htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
